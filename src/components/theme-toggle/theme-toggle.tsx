@@ -1,5 +1,5 @@
 import React from 'react';
-import { useThemeStore } from '../../store/useThemeStore';
+import { useThemeStore } from '../../store/use-theme-store';
 import './theme-toggle.css';
 
 const SunIcon = () => (

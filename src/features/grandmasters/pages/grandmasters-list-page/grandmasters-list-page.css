@@ -1,0 +1,16 @@
+.grandmasters-page {
+  width: 100%;
+}
+
+.page-intro {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .page-intro {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}

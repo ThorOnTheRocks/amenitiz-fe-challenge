@@ -8,13 +8,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color var(--transition-speed);
-  width: 40px;
-  height: 40px;
+  transition: all 0.2s ease;
+  width: 36px;
+  height: 36px;
+  outline: none;
 }
 
 .theme-toggle:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
 }
 
 [data-theme="dark"] .theme-toggle:hover {
@@ -22,9 +24,13 @@
 }
 
 .theme-toggle svg {
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .theme-toggle:hover svg {
-  transform: rotate(12deg) scale(1.1);
+  transform: rotate(12deg);
+}
+
+.theme-toggle:active svg {
+  transform: scale(0.8);
 } 
