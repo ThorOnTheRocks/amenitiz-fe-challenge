@@ -1,0 +1,30 @@
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  padding: var(--space-xs);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-speed);
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle svg {
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover svg {
+  transform: rotate(12deg) scale(1.1);
+} 

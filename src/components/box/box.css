@@ -1,0 +1,171 @@
+.box {
+  box-sizing: border-box;
+}
+
+.box--block {
+  display: block;
+}
+
+.box--flex {
+  display: flex;
+}
+
+.box--inline {
+  display: inline;
+}
+
+.box--inline-block {
+  display: inline-block;
+}
+
+.box--grid {
+  display: grid;
+}
+
+.box--row {
+  flex-direction: row;
+}
+
+.box--column {
+  flex-direction: column;
+}
+
+.box--row-reverse {
+  flex-direction: row-reverse;
+}
+
+.box--column-reverse {
+  flex-direction: column-reverse;
+}
+
+.box--align-start {
+  align-items: flex-start;
+}
+
+.box--align-center {
+  align-items: center;
+}
+
+.box--align-end {
+  align-items: flex-end;
+}
+
+.box--align-stretch {
+  align-items: stretch;
+}
+
+.box--align-baseline {
+  align-items: baseline;
+}
+
+.box--justify-start {
+  justify-content: flex-start;
+}
+
+.box--justify-center {
+  justify-content: center;
+}
+
+.box--justify-end {
+  justify-content: flex-end;
+}
+
+.box--justify-between {
+  justify-content: space-between;
+}
+
+.box--justify-around {
+  justify-content: space-around;
+}
+
+.box--justify-evenly {
+  justify-content: space-evenly;
+}
+
+.box--nowrap {
+  flex-wrap: nowrap;
+}
+
+.box--wrap {
+  flex-wrap: wrap;
+}
+
+.box--wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.box--gap-xs {
+  gap: var(--space-xs);
+}
+
+.box--gap-sm {
+  gap: var(--space-sm);
+}
+
+.box--gap-md {
+  gap: var(--space-md);
+}
+
+.box--gap-lg {
+  gap: var(--space-lg);
+}
+
+.box--gap-xl {
+  gap: var(--space-xl);
+}
+
+.box--padding-xs {
+  padding: var(--space-xs);
+}
+
+.box--padding-sm {
+  padding: var(--space-sm);
+}
+
+.box--padding-md {
+  padding: var(--space-md);
+}
+
+.box--padding-lg {
+  padding: var(--space-lg);
+}
+
+.box--padding-xl {
+  padding: var(--space-xl);
+}
+
+.box--margin-xs {
+  margin: var(--space-xs);
+}
+
+.box--margin-sm {
+  margin: var(--space-sm);
+}
+
+.box--margin-md {
+  margin: var(--space-md);
+}
+
+.box--margin-lg {
+  margin: var(--space-lg);
+}
+
+.box--margin-xl {
+  margin: var(--space-xl);
+}
+
+.box--radius-sm {
+  border-radius: calc(var(--border-radius) * 0.5);
+}
+
+.box--radius-md {
+  border-radius: var(--border-radius);
+}
+
+.box--radius-lg {
+  border-radius: calc(var(--border-radius) * 2);
+}
+
+.box--radius-full {
+  border-radius: 9999px;
+} 
