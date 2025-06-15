@@ -6,7 +6,7 @@ const mockStore = {
   isDarkMode: false,
 };
 
-vi.mock('../../store/useThemeStore', () => ({
+vi.mock('../../store/use-theme-store', () => ({
   useThemeStore: () => mockStore,
 }));
 

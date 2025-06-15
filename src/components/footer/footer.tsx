@@ -1,50 +1,52 @@
-import Box from '../box';
-import Text from '../text';
 import './footer.css';
 
-export function Footer() {
+interface FooterProps {
+  copyrightText?: string;
+  disclaimerText?: string;
+  links?: Array<{
+    text: string;
+    url: string;
+  }>;
+}
+
+export function Footer({
+  copyrightText = "Chess Grandmasters Explorer",
+  disclaimerText = "This application uses data from the Chess.com API. Chess.com is a registered trademark.",
+  links = [
+    { text: "Terms", url: "https://www.chess.com/terms" },
+    { text: "About Chess.com", url: "https://www.chess.com/about" },
+    { text: "Privacy", url: "https://www.chess.com/legal/privacy" }
+  ]
+}: FooterProps) {
   const currentYear = new Date().getFullYear();
   
   return (
-    <Box className="footer" padding="md">
-      <Box className="footer-content" display="flex" justify="between" align="center">
-        <Text variant="body" className="copyright">
-          &copy; {currentYear} Chess Grandmasters Explorer
-        </Text>
+    <footer className="footer">
+      <div className="footer-content">
+        <p className="copyright">
+          &copy; {currentYear} {copyrightText}
+        </p>
         
-        <Box className="footer-links">
-          <a 
-            href="https://www.chess.com/terms" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="footer-link"
-          >
-            Terms
-          </a>
-          <a 
-            href="https://www.chess.com/about" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="footer-link"
-          >
-            About Chess.com
-          </a>
-          <a 
-            href="https://www.chess.com/legal/privacy" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="footer-link"
-          >
-            Privacy
-          </a>
-        </Box>
-      </Box>
+        <div className="footer-links">
+          {links.map((link, index) => (
+            <a 
+              key={index}
+              href={link.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              {link.text}
+            </a>
+          ))}
+        </div>
+      </div>
       
-      <Box className="footer-disclaimer" margin="sm">
-        <Text variant="caption">
-          This application uses data from the Chess.com API. Chess.com is a registered trademark.
-        </Text>
-      </Box>
-    </Box>
+      <div className="footer-disclaimer">
+        <p className="disclaimer-text">
+          {disclaimerText}
+        </p>
+      </div>
+    </footer>
   );
 } 

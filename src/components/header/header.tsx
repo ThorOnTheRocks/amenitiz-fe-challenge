@@ -1,32 +1,38 @@
 import { Link } from 'react-router-dom';
-import Box from '../box';
-import Text from '../text';
 import ThemeToggle from '../theme-toggle';
 import './header.css';
 
-export function Header() {
+interface HeaderProps {
+  title?: string;
+  externalLinkText?: string;
+  externalLinkUrl?: string;
+}
+
+export function Header({
+  title = "Chess Grandmasters",
+  externalLinkText = "Chess.com",
+  externalLinkUrl = "https://www.chess.com/players"
+}: HeaderProps) {
   return (
-    <Box className="header" padding="md">
-      <Box className="header-content" display="flex" justify="between" align="center">
+    <header className="header">
+      <div className="header-content">
         <Link to="/" className="header-logo">
-          <Box display="flex" align="center">
-            <div className="logo-icon">♞</div>
-            <Text variant="h2">Chess Grandmasters</Text>
-          </Box>
+          <div className="logo-icon">♞</div>
+          <h2>{title}</h2>
         </Link>
         
-        <Box className="header-nav">
+        <nav className="header-nav">
           <a 
-            href="https://www.chess.com/players" 
+            href={externalLinkUrl} 
             target="_blank" 
             rel="noopener noreferrer"
             className="nav-link"
           >
-            Chess.com
+            {externalLinkText}
           </a>
           <ThemeToggle />
-        </Box>
-      </Box>
-    </Box>
+        </nav>
+      </div>
+    </header>
   );
 } 

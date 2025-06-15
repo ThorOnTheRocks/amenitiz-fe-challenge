@@ -1,7 +1,7 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { GrandmasterProfilePage } from './grandmaster-profile-page';
-import { useGrandmasterProfileStore } from '../../store/useGrandmasterProfileStore';
+import { useGrandmasterProfileStore } from '../../store/use-grandmaster-profile-store';
 import type { GrandmasterProfile } from '../../../../types/grandmaster';
 
 vi.mock('react-router-dom', () => ({

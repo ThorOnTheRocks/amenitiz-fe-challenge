@@ -1,7 +1,7 @@
 .theme-toggle {
   background: transparent;
   border: none;
-  color: var(--color-text-primary);
+  color: var(--header-text);
   cursor: pointer;
   padding: var(--space-xs);
   border-radius: 50%;
@@ -15,8 +15,9 @@
 }
 
 .theme-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   transform: scale(1.1);
+  color: var(--header-accent);
 }
 
 [data-theme="dark"] .theme-toggle:hover {

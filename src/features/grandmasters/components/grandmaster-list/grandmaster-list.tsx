@@ -3,8 +3,8 @@ import Box from '../../../../components/box';
 import Text from '../../../../components/text';
 import { Pagination } from '../../../../components/pagination';
 import GrandmasterCard from '../grandmaster-card';
-import { useGrandmastersStore } from '../../store/useGrandmastersStore';
-import { useGrandmasterProfileStore } from '../../store/useGrandmasterProfileStore';
+import { useGrandmastersStore } from '../../store/use-grandmasters-store';
+import { useGrandmasterProfileStore } from '../../store/use-grandmaster-profile-store';
 import './grandmaster-list.css';
 
 export function GrandmasterList() {  

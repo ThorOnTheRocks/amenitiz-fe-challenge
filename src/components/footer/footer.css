@@ -1,17 +1,23 @@
 .footer {
-  background-color: #2c3e50;
-  color: white;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   margin-top: auto;
   padding: 1.5rem 1rem;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .copyright {
-  color: #ecf0f1;
+  color: var(--footer-text);
+  margin: 0;
+  transition: color var(--transition-speed);
 }
 
 .footer-links {
@@ -20,21 +26,27 @@
 }
 
 .footer-link {
-  color: #ecf0f1;
+  color: var(--footer-text);
   text-decoration: none;
   font-size: 0.9rem;
-  transition: color 0.2s ease;
+  transition: color var(--transition-speed);
 }
 
 .footer-link:hover {
-  color: #f39c12;
+  color: var(--footer-accent);
+  text-decoration: none;
 }
 
 .footer-disclaimer {
   text-align: center;
-  color: #bdc3c7;
   margin-top: 1.5rem;
+}
+
+.disclaimer-text {
+  color: var(--color-text-muted);
   font-size: 0.8rem;
+  margin: 0;
+  transition: color var(--transition-speed);
 }
 
 @media (max-width: 768px) {

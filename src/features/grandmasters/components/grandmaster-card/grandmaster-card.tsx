@@ -15,7 +15,9 @@ export function GrandmasterCard({ grandmaster }: GrandmasterCardProps) {
         margin="sm" 
         className="grandmaster-card"
       >
-        <Text variant="h3">{grandmaster.username}</Text>
+        <Text variant="h3" truncate={true} title={grandmaster.username}>
+          {grandmaster.username}
+        </Text>
         <Link to={`/grandmaster/${grandmaster.username}`} className="grandmaster-card-link">
             <Text variant="body">Click to view profile</Text>
         </Link>

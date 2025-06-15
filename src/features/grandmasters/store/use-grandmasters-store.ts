@@ -25,7 +25,7 @@ export const useGrandmastersStore = create<GrandmastersState>((set, get) => ({
   error: null,
   searchTerm: '',
   currentPage: 1,
-  itemsPerPage: 10,
+  itemsPerPage: 12,
   
   fetchGrandmasters: async () => {
     set({ loading: true, error: null });

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Box from '../../../../components/box';
 import Text from '../../../../components/text';
 import { GrandmasterList } from '../../components/grandmaster-list/grandmaster-list';
-import { useGrandmastersStore } from '../../store/useGrandmastersStore';
+import { useGrandmastersStore } from '../../store/use-grandmasters-store';
 import './grandmasters-list-page.css';
 
 export function GrandmastersListPage() {

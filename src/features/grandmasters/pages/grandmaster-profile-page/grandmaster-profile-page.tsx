@@ -4,7 +4,7 @@ import Box from '../../../../components/box';
 import Text from '../../../../components/text';
 import { LastOnlineClock } from '../../components/last-online-clock';
 import { formatDate } from '../../../../utils/date-utils';
-import { useGrandmasterProfileStore } from '../../store/useGrandmasterProfileStore';
+import { useGrandmasterProfileStore } from '../../store/use-grandmaster-profile-store';
 import './grandmaster-profile-page.css';
 
 export function GrandmasterProfilePage() {
@@ -86,22 +86,32 @@ export function GrandmasterProfilePage() {
 
               <Box className="profile-details">
                 {profile.location && (
-                  <Text variant="body">Location: {profile.location}</Text>
+                  <Box padding='sm'>
+                    <Text variant="body">Location: {profile.location}</Text>
+                  </Box>
                 )}
                 {profile.country && (
-                  <Text variant="body">Country: {profile.country}</Text>
+                  <Box padding='sm'>
+                    <Text variant="body">Country: {profile.country}</Text>
+                  </Box>
                 )}
                 {profile.joined && (
-                  <Text variant="body">Joined: {formatDate(profile.joined)}</Text>
+                  <Box padding='sm'>
+                    <Text variant="body">Joined: {formatDate(profile.joined)}</Text>
+                  </Box>
                 )}
                 {profile.followers !== undefined && (
-                  <Text variant="body">Followers: {profile.followers}</Text>
+                  <Box padding='sm'>
+                    <Text variant="body">Followers: {profile.followers}</Text>
+                  </Box>
                 )}
                 {profile.is_streamer && (
-                  <Text variant="body" className="streamer-badge">Chess.com Streamer</Text>
+                  <Box padding='sm'>
+                    <Text variant="body" className="streamer-badge">Chess.com Streamer</Text>
+                  </Box>
                 )}
                 {profile.url && (
-                  <Box>
+                  <Box padding='sm'>
                     <a 
                       href={profile.url} 
                       target="_blank" 
