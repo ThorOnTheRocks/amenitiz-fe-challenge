@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# Chess Grandmasters Wiki
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application that displays information about Chess Grandmasters from Chess.com.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Grandmaster Listing**: Browse a complete list of Chess Grandmasters as defined by Chess.com
+- **Search Functionality**: Filter grandmasters by username
+- **Profile Pages**: View detailed information about individual grandmasters
+- **Last Online Clock**: Real-time display of time since a grandmaster was last online
+- **Responsive Design**: Works on desktop and mobile devices
+- **Dark/Light Theme**: Toggle between dark and light mode for comfortable viewing
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Zustand for state management
+- React Router v7
+- Chess.com API
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Structure
+
+The project follows a feature-based architecture:
+
+```
+src/
+├── assets/            # Static assets
+├── components/        # Reusable UI components
+├── config/            # Application configuration
+├── features/          # Feature modules
+│   └── grandmasters/  # Grandmaster feature module
+│       ├── components/# Feature-specific components
+│       ├── pages/     # Route-level components
+│       ├── services/  # API and data services
+│       └── store/     # State management
+├── store/             # Global state management
+├── styles/            # Global styles
+├── types/             # TypeScript type definitions
+└── utils/             # Utility functions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## State Management
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The application uses Zustand for state management with three main stores:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- **GrandmastersStore**: Manages the list of grandmasters, pagination, and search functionality
+- **GrandmasterProfileStore**: Manages individual grandmaster profile data with caching
+- **ThemeStore**: Handles theme switching between light and dark modes, persisting user preference
+
+## Running the Project
+
+### Prerequisites
+
+- Node.js 18+ and npm/pnpm
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+### Building for Production
+
+```bash
+pnpm build
 ```
+
+## API Usage
+
+This project uses the Chess.com API:
+
+- `/pub/titled/GM` - List of all GM titled players
+- `/pub/player/{username}` - Player profile information
+
+## License
+
+MIT

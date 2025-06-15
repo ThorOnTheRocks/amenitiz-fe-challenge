@@ -38,6 +38,8 @@
   margin-right: 0.5rem;
   color: var(--header-accent);
   transition: color var(--transition-speed);
+  display: flex;
+  align-items: center;
 }
 
 .header-nav {

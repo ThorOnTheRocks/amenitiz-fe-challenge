@@ -17,7 +17,7 @@ export function Header({
     <header className="header">
       <div className="header-content">
         <Link to="/" className="header-logo">
-          <div className="logo-icon">♞</div>
+          <div className="logo-icon">♖</div>
           <h2>{title}</h2>
         </Link>
         
