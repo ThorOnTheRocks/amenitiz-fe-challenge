@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Box from '../../../../components/box';
-import Text from '../../../../components/text';
+import { Box, Text } from '../../../../components';
 import { LastOnlineClock } from '../../components/last-online-clock';
 import { formatDate } from '../../../../utils/date-utils';
 import { useGrandmasterProfileStore } from '../../store/use-grandmaster-profile-store';
@@ -148,5 +147,3 @@ export function GrandmasterProfilePage() {
 
   return renderProfileDetails();
 }
-
-export default GrandmasterProfilePage; 

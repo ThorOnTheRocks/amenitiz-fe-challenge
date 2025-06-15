@@ -5,3 +5,6 @@ export * from './card';
 export * from './text';
 export * from './button';
 export * from './pagination';
+export * from './layout';
+export * from './header';
+export * from './footer';

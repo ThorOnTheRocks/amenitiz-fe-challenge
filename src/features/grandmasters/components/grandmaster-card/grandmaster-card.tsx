@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import Box from '../../../../components/box';
-import Text from '../../../../components/text';
+import { Box, Text } from '../../../../components';
 import type { Grandmaster } from '../../../../types/grandmaster';
 import './grandmaster-card.css';
 

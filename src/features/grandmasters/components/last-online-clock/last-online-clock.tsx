@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import Text from '../../../../components/text';
-import Box from '../../../../components/box';
+import { Box, Text } from '../../../../components';
 import { formatTimeSinceLastOnline } from '../../../../utils/date-utils';
 import './last-online-clock.css';
 

@@ -5,7 +5,7 @@ import './box.css';
 
 
 
-const Box: React.FC<BoxProps> = ({
+export const Box: React.FC<BoxProps> = ({
   children,
   as = 'div',
   display,
@@ -57,5 +57,3 @@ const Box: React.FC<BoxProps> = ({
     </Component>
   );
 };
-
-export default Box; 

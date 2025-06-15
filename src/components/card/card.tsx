@@ -2,7 +2,7 @@ import React from 'react';
 import type { CardProps } from './card.types';
 import './card.css';
 
-const Card: React.FC<CardProps> = ({
+export const Card: React.FC<CardProps> = ({
   children,
   variant = 'default',
   padding = 'medium',
@@ -24,5 +24,3 @@ const Card: React.FC<CardProps> = ({
     </div>
   );
 };
-
-export default Card; 

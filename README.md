@@ -79,7 +79,3 @@ This project uses the Chess.com API:
 
 - `/pub/titled/GM` - List of all GM titled players
 - `/pub/player/{username}` - Player profile information
-
-## License
-
-MIT

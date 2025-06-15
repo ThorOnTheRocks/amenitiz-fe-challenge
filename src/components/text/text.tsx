@@ -2,7 +2,7 @@ import React from 'react';
 import type { TextProps } from './text.types';
 import './text.css';
 
-const Text: React.FC<TextProps> = ({
+export const Text: React.FC<TextProps> = ({
   children,
   variant = 'body',
   as,
@@ -40,5 +40,3 @@ const Text: React.FC<TextProps> = ({
     </Component>
   );
 };
-
-export default Text; 

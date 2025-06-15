@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
-import Box from '../../../../components/box';
-import Text from '../../../../components/text';
+import { Box, Text } from '../../../../components';
 import { GrandmasterList } from '../../components/grandmaster-list/grandmaster-list';
 import { useGrandmastersStore } from '../../store/use-grandmasters-store';
 import './grandmasters-list-page.css';
@@ -28,5 +27,3 @@ export function GrandmastersListPage() {
     </Box>
   );
 }
-
-export default GrandmastersListPage; 

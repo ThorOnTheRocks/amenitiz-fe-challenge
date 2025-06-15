@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import ThemeProvider from './theme-provider';
+import { ThemeProvider } from './theme-provider';
 
 const mockStore = {
   isDarkMode: false,

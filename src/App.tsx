@@ -1,9 +1,7 @@
 import './styles/global.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Layout } from './components/layout';
-import GrandmastersListPage from './features/grandmasters/pages/grandmasters-list-page';
-import GrandmasterProfilePage from './features/grandmasters/pages/grandmaster-profile-page';
-import ThemeProvider from './components/theme-provider';
+import { Layout, ThemeProvider } from './components';
+import { GrandmastersListPage, GrandmasterProfilePage } from './features/grandmasters/pages';
 
 function App() {
   return (

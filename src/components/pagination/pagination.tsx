@@ -1,4 +1,3 @@
-import Box from '../box';
 import './pagination.css';
 
 export interface PaginationProps {
@@ -56,7 +55,7 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
   };
 
   return (
-    <Box className="pagination-container">
+    <div className="pagination-container">
       <button 
         className="pagination-button"
         onClick={handlePrevious}
@@ -92,6 +91,6 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
       >
         &raquo;
       </button>
-    </Box>
+    </div>
   );
 } 

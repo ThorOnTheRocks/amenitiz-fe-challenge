@@ -22,7 +22,7 @@ const MoonIcon = () => (
   </svg>
 );
 
-const ThemeToggle: React.FC = () => {
+export const ThemeToggle: React.FC = () => {
   const { isDarkMode, toggleTheme } = useThemeStore();
 
   return (
@@ -35,5 +35,3 @@ const ThemeToggle: React.FC = () => {
     </button>
   );
 };
-
-export default ThemeToggle; 

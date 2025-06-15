@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import Text from './text';
+import { Text } from './text';
 
 describe('Text', () => {
   it('should render children as content', () => {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import ThemeToggle from '../theme-toggle';
+import { ThemeToggle } from '../theme-toggle';
 import './header.css';
 
 interface HeaderProps {

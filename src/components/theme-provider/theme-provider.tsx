@@ -5,7 +5,7 @@ interface ThemeProviderProps {
   children: React.ReactNode;
 }
 
-const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const { isDarkMode } = useThemeStore();
 
   useEffect(() => {
@@ -18,5 +18,3 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   return <>{children}</>;
 };
-
-export default ThemeProvider; 

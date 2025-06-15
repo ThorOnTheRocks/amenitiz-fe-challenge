@@ -3,7 +3,7 @@ import type { ButtonProps } from './button.types';
 import './button.css';
 
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
   size = 'md',
@@ -37,5 +37,3 @@ const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-
-export default Button; 

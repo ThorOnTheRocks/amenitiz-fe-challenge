@@ -13,7 +13,7 @@ vi.mock('./store/use-theme-store', () => ({
 }));
 
 vi.mock('./components/theme-provider', () => ({
-  default: ({ children }: { children: React.ReactNode }) => <div data-testid="theme-provider">{children}</div>,
+  ThemeProvider: ({ children }: { children: React.ReactNode }) => <div data-testid="theme-provider">{children}</div>,
 }));
 
 vi.mock('./components/layout', () => ({
@@ -56,12 +56,9 @@ vi.mock('react-router-dom', () => ({
   ),
 }));
 
-vi.mock('./features/grandmasters/pages/grandmasters-list-page', () => ({
-  default: () => <div data-testid="grandmasters-list-page">Grandmasters List Page</div>,
-}));
-
-vi.mock('./features/grandmasters/pages/grandmaster-profile-page', () => ({
-  default: () => <div data-testid="grandmaster-profile-page">Grandmaster Profile Page</div>,
+vi.mock('./features/grandmasters/pages', () => ({
+  GrandmastersListPage: () => <div data-testid="grandmasters-list-page">Grandmasters List Page</div>,
+  GrandmasterProfilePage: () => <div data-testid="grandmaster-profile-page">Grandmaster Profile Page</div>,
 }));
 
 describe('App', () => {

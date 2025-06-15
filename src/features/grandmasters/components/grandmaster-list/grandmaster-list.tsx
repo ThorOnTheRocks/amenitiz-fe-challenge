@@ -1,7 +1,5 @@
 import { useEffect, useCallback } from 'react';
-import Box from '../../../../components/box';
-import Text from '../../../../components/text';
-import { Pagination } from '../../../../components/pagination';
+import { Box, Text, Pagination } from '../../../../components';
 import GrandmasterCard from '../grandmaster-card';
 import { useGrandmastersStore } from '../../store/use-grandmasters-store';
 import { useGrandmasterProfileStore } from '../../store/use-grandmaster-profile-store';
